@@ -52,9 +52,6 @@ const AnimatedCounter = ({ value, suffix }: { value: number; suffix: string }) =
 
       animationFrameId = requestAnimationFrame(animate);
       return () => cancelAnimationFrame(animationFrameId);
-    } else {
-      setCount(0);
-      prevValueRef.current = 0;
     }
   }, [value, isInView]);
 

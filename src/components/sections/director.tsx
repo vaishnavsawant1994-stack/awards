@@ -65,10 +65,10 @@ export const DirectorSection: React.FC<DirectorSectionProps> = ({ initialDirecto
           <div className={styles.divider} />
           
           <p className={styles.quote}>
-            "{displayQuote}"
+            “{displayQuote}”
           </p>
           <p className={styles.paragraph}>
-            "{displayParagraph}"
+            “{displayParagraph}”
           </p>
         </motion.div>
       </div>

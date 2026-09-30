@@ -70,7 +70,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ initia
                     <MessageSquare className={styles.quoteIcon} size={28} />
                   </div>
                 </div>
-                <p className={styles.quoteText}>"{test.quote}"</p>
+                <p className={styles.quoteText}>“{test.quote}”</p>
               </Card>
             </motion.div>
           ))}

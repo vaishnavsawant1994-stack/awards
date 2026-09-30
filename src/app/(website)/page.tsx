@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import styles from "../page.module.css";
 import { HeroSection } from "@/components/sections/hero";
 import { WinnersSection } from "@/components/sections/winners";
@@ -72,16 +73,24 @@ const guestOfHonourQuery = `*[_type == "guestOfHonour"] | order(_createdAt asc) 
   "videoFileUrl": videoFile.asset->url
 }`;
 
+type Winners = NonNullable<ComponentProps<typeof WinnersSection>["initialWinners"]>;
+type NightOfGlitz = NonNullable<ComponentProps<typeof AwardNightSection>["initialData"]>;
+type Glimpses = NonNullable<ComponentProps<typeof CategoriesSection>["initialGlimpses"]>;
+type Jury = NonNullable<ComponentProps<typeof JurySection>["initialJury"]>;
+type Testimonials = NonNullable<ComponentProps<typeof TestimonialsSection>["initialTestimonials"]>;
+type Gallery = NonNullable<ComponentProps<typeof MediaSection>["initialGallery"]>;
+type HonourGuests = NonNullable<ComponentProps<typeof HonourGuestsSection>["initialGuests"]>;
+
 export default async function Home() {
   // Fetch data in parallel with fallback to empty array or null if Sanity fetches fail or return empty
-  let winners: any[] = [];
-  let aboutImageContent: any = null;
-  let nightOfGlitzContent: any = null;
-  let glimpsesContent: any[] = [];
-  let juryMembers: any[] = [];
-  let testimonials: any[] = [];
-  let awardNightGalleryContent: any[] = [];
-  let guestOfHonourContent: any[] = [];
+  let winners: Winners = [];
+  let aboutImageContent: { image?: string } | null = null;
+  let nightOfGlitzContent: NightOfGlitz | null = null;
+  let glimpsesContent: Glimpses = [];
+  let juryMembers: Jury = [];
+  let testimonials: Testimonials = [];
+  let awardNightGalleryContent: Gallery = [];
+  let guestOfHonourContent: HonourGuests = [];
 
   try {
     const [
