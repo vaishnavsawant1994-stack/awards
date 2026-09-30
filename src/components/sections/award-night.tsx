@@ -78,8 +78,8 @@ export const AwardNightSection: React.FC<AwardNightSectionProps> = ({ initialDat
           <h3 className={styles.kicker}>The Night of Glitz</h3>
           <h2 className={styles.title}>Witness the Ceremony</h2>
           <p className={styles.paragraph}>
-            The Global Awards ceremony is more than an event; it's a showcase of human potential.
-            Experience highlights where industry titans meet tomorrow's disruptors.
+            The Global Awards ceremony is more than an event; it’s a showcase of human potential.
+            Experience highlights where industry titans meet tomorrow’s disruptors.
           </p>
           <div className={styles.statsDivider}></div>
           <div className={styles.statsGrid}>
