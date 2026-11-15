@@ -36,3 +36,7 @@ Run `npm run lint` and `npm run build` before publishing.
 ## Recommended next work
 
 Document the award categories, nomination/judging/publication workflow, Sanity dataset configuration, environment variables, live URL, test coverage, and release status. Remove generated build logs from source control if they are not intentional evidence artifacts.
+
+## Complete project guide
+
+For an individual explanation of this repository's purpose, users, workflows, architecture, current implementation limits, developer setup, security boundaries and prioritized engineering work, see the [**Project Handbook**](docs/PROJECT_HANDBOOK.md). This documentation reflects inspected repository source and is not a live-release certification.
